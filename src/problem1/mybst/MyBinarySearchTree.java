@@ -14,7 +14,7 @@ public class MyBinarySearchTree {
         public TreeNode getRoot(){
             return root;
         }
-        //insert
+        //insert element in BST
         public void insert(int data){
             TreeNode node=new TreeNode(data);
             if(root==null){
@@ -39,8 +39,33 @@ public class MyBinarySearchTree {
                     parent.setRight(node);
                 }
             }
-
         }
+
+//Algorithm
+    /* if tree != null
+
+
+     */
+//method to print left child
+    public void LeftNodes(TreeNode root)
+        {
+
+            int countNoLeftChild=0;
+            if (root.getLeft() != null)
+            {
+                System.out.print(root.getLeft().getData()+" ");
+                LeftNodes(root.getLeft());
+            }
+            else{
+                countNoLeftChild+=1;
+            }
+            if(root.getRight() != null)
+            {
+                LeftNodes(root.getRight());
+            }
+        }
+
+
 
     public void traversePreOrder(TreeNode node){
         if(node != null){
