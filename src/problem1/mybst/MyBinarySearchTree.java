@@ -10,6 +10,7 @@ import problem1.node.TreeNode;
 public class MyBinarySearchTree {
 
         TreeNode root;
+       static int countnoLeftChild;
 
         public TreeNode getRoot(){
             return root;
@@ -41,31 +42,28 @@ public class MyBinarySearchTree {
             }
         }
 
-//Algorithm
-    /* if tree != null
 
-
-     */
-//method to print left child
+//method to print left child nodes
     public void LeftNodes(TreeNode root)
         {
 
-            int countNoLeftChild=0;
             if (root.getLeft() != null)
             {
                 System.out.print(root.getLeft().getData()+" ");
                 LeftNodes(root.getLeft());
             }
             else{
-                countNoLeftChild+=1;
+                countnoLeftChild+=1;
             }
             if(root.getRight() != null)
             {
                 LeftNodes(root.getRight());
             }
         }
-
-
+//returning no. of nodes who doesn't have left child nodes
+    public static int getCountnoLeftChild() {
+        return countnoLeftChild;
+    }
 
     public void traversePreOrder(TreeNode node){
         if(node != null){

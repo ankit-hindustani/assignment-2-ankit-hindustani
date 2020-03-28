@@ -19,8 +19,15 @@ public class MyMain {
         obj.insert(15);
         obj.insert(9);
         obj.insert(10);
+        obj.insert(12);
+        obj.insert(13);
+        obj.insert(4);
 
-//printing left child
+//printing left child nodes
+        System.out.println("left child nodes= ");
         obj.LeftNodes(obj.getRoot());
+//count and printing no. of nodes who doesn't have left child
+        System.out.println();
+        System.out.println("no. of nodes who doesn't have left child= "+obj.getCountnoLeftChild());
     }
 }
